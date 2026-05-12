@@ -30,14 +30,11 @@ public class ProductService {
      public void deleteProduct(int id) {
         productRepository.deleteById((long) id);
     }
+
     public void updateProduct(int id, Product updatedProduct) {
-        Product existingProduct = productRepository.findById((long) id).orElse(null);
-        if (existingProduct != null) {
-            existingProduct.setProdName(updatedProduct.getProdName());
-            existingProduct.setProdPrice(updatedProduct.getProdPrice());
-            existingProduct.setProdDescription(updatedProduct.getProdDescription());
-            productRepository.save(existingProduct);
-        }
+
+        productRepository.save(updatedProduct);
+
     }
 
 
