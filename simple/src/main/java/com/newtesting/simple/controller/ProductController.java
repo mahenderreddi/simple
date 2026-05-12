@@ -40,6 +40,10 @@ public class ProductController {
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
     }
+@GetMapping("/message")
+    public String messsage(){
+        return "simple plain text message";
+    }
 
     @GetMapping("/{id}")
     public Product getProductById(@PathVariable int id) {
