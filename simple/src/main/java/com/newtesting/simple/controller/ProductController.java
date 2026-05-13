@@ -45,7 +45,7 @@ public class ProductController {
         return "simple plain text message";
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public Product getProductById(@PathVariable int id) {
         return productService.getProductById(id);
     }
