@@ -23,7 +23,10 @@ public class ProductController {
 //        System.out.println(product);
 //    }
 
-
+    @GetMapping("/check")
+    public String check(){
+        return "CONTROLLER IS WORKING";
+    }
     @PostMapping
     public void addProduct(@RequestBody Product product) {
         productService.addProduct(product);
