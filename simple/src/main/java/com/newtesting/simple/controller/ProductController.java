@@ -35,15 +35,15 @@ public class ProductController {
 //        System.out.println(product);
 //    }
 
-
+    @GetMapping("/message")
+    public String messsage(){
+        return "simple plain text message";
+    }
     @GetMapping
     public List<Product> getAllProducts() {
         return productService.getAllProducts();
     }
-@GetMapping("/message")
-    public String messsage(){
-        return "simple plain text message";
-    }
+
 
     @GetMapping("/id/{id}")
     public Product getProductById(@PathVariable int id) {
