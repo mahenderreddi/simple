@@ -54,4 +54,9 @@ public class ProductController {
     public void updateProduct(@PathVariable int id, @RequestBody  Product updatedProduct) {
         productService.updateProduct(id, updatedProduct);
     }
+    @GetMapping("/message")
+    public String message(){
+        return "addding message for test";
+
+    }
 }
